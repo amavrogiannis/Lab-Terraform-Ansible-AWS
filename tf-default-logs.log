@@ -1,0 +1,125 @@
+2022-09-10T20:29:28.052+0100 [ERROR] vertex "module.network.aws_subnet.main_private[1]" error: error creating EC2 Subnet: InvalidSubnet.Range: The CIDR '10.104.0.0/16' is invalid.
+	status code: 400, request id: d0a5a284-6763-44ff-be56-d5d585138f67
+2022-09-10T20:29:28.054+0100 [ERROR] vertex "module.network.aws_subnet.main_private[0]" error: error creating EC2 Subnet: InvalidSubnet.Range: The CIDR '10.100.0.0/16' is invalid.
+	status code: 400, request id: f0377739-ad9b-4561-ba51-8bc3ab878edb
+2022-09-10T20:29:28.056+0100 [ERROR] vertex "module.network.aws_subnet.main_public[0]" error: error creating EC2 Subnet: InvalidSubnet.Range: The CIDR '10.10.0.0/16' is invalid.
+	status code: 400, request id: 2a7b8a55-0541-4d11-83f3-f03b43ee2902
+2022-09-10T20:30:09.990+0100 [ERROR] vertex "module.network.aws_subnet.main_private[0]" error: "10.0.100.0/16" is not a valid IPv4 CIDR block; did you mean "10.0.0.0/16"?
+2022-09-10T20:30:09.991+0100 [ERROR] vertex "module.network.aws_subnet.main_private[1]" error: "10.0.104.0/16" is not a valid IPv4 CIDR block; did you mean "10.0.0.0/16"?
+2022-09-10T20:30:09.991+0100 [ERROR] vertex "module.network.aws_subnet.main_public[0]" error: "10.0.10.0/16" is not a valid IPv4 CIDR block; did you mean "10.0.0.0/16"?
+2022-09-10T20:30:09.991+0100 [ERROR] vertex "module.network.aws_subnet.main_public" error: "10.0.10.0/16" is not a valid IPv4 CIDR block; did you mean "10.0.0.0/16"?
+2022-09-10T20:30:09.991+0100 [ERROR] vertex "module.network.aws_subnet.main_public (expand)" error: "10.0.10.0/16" is not a valid IPv4 CIDR block; did you mean "10.0.0.0/16"?
+2022-09-10T20:30:09.991+0100 [ERROR] vertex "module.network.aws_subnet.main_private" error: "10.0.100.0/16" is not a valid IPv4 CIDR block; did you mean "10.0.0.0/16"?
+2022-09-10T20:30:09.991+0100 [ERROR] vertex "module.network.aws_subnet.main_private" error: "10.0.104.0/16" is not a valid IPv4 CIDR block; did you mean "10.0.0.0/16"?
+2022-09-10T20:30:09.991+0100 [ERROR] vertex "module.network.aws_subnet.main_private (expand)" error: "10.0.100.0/16" is not a valid IPv4 CIDR block; did you mean "10.0.0.0/16"?
+2022-09-10T20:30:09.991+0100 [ERROR] vertex "module.network.aws_subnet.main_private (expand)" error: "10.0.104.0/16" is not a valid IPv4 CIDR block; did you mean "10.0.0.0/16"?
+2022-09-10T20:31:05.999+0100 [ERROR] vertex "module.network.aws_subnet.main_private[0]" error: "10.0.100.0/16" is not a valid IPv4 CIDR block; did you mean "10.0.0.0/16"?
+2022-09-10T20:31:05.999+0100 [ERROR] vertex "module.network.aws_subnet.main_private[1]" error: "10.0.104.0/16" is not a valid IPv4 CIDR block; did you mean "10.0.0.0/16"?
+2022-09-10T20:31:05.999+0100 [ERROR] vertex "module.network.aws_subnet.main_private" error: "10.0.100.0/16" is not a valid IPv4 CIDR block; did you mean "10.0.0.0/16"?
+2022-09-10T20:31:05.999+0100 [ERROR] vertex "module.network.aws_subnet.main_private" error: "10.0.104.0/16" is not a valid IPv4 CIDR block; did you mean "10.0.0.0/16"?
+2022-09-10T20:31:05.999+0100 [ERROR] vertex "module.network.aws_subnet.main_private (expand)" error: "10.0.100.0/16" is not a valid IPv4 CIDR block; did you mean "10.0.0.0/16"?
+2022-09-10T20:31:05.999+0100 [ERROR] vertex "module.network.aws_subnet.main_private (expand)" error: "10.0.104.0/16" is not a valid IPv4 CIDR block; did you mean "10.0.0.0/16"?
+2022-09-10T20:31:46.995+0100 [ERROR] vertex "module.network.aws_subnet.main_private[1]" error: error creating EC2 Subnet: InvalidSubnet.Range: The CIDR '10.104.0.0/16' is invalid.
+	status code: 400, request id: cc519202-e991-4c6d-8dc7-abfa37b093ad
+2022-09-10T20:31:46.995+0100 [ERROR] vertex "module.network.aws_subnet.main_public[0]" error: error creating EC2 Subnet: InvalidSubnet.Range: The CIDR '10.10.0.0/16' is invalid.
+	status code: 400, request id: aed1cf0e-83ba-4a3f-9e31-43b52e664850
+2022-09-10T20:31:47.072+0100 [ERROR] vertex "module.network.aws_subnet.main_private[0]" error: error creating EC2 Subnet: InvalidSubnet.Range: The CIDR '10.100.0.0/16' is invalid.
+	status code: 400, request id: 699cf101-b9bd-482c-a146-cc70bce8e940
+2022-09-10T22:51:34.900+0100 [ERROR] vertex "module.network.aws_route_table_association.main" error: Missing resource instance key
+2022-09-10T22:52:17.107+0100 [ERROR] vertex "module.network.aws_route_table_association.main" error: Missing resource instance key
+2022-09-10T22:52:42.467+0100 [ERROR] vertex "module.network.aws_route_table_association.main[0]" error: Incorrect attribute value type
+2022-09-10T22:52:42.467+0100 [ERROR] vertex "module.network.aws_route_table_association.main" error: Incorrect attribute value type
+2022-09-10T22:52:42.467+0100 [ERROR] vertex "module.network.aws_route_table_association.main (expand)" error: Incorrect attribute value type
+2022-09-10T22:53:24.748+0100 [ERROR] vertex "module.network.aws_route_table_association.main" error: Unsupported argument
+2022-09-10T22:53:35.684+0100 [ERROR] vertex "module.network.aws_route_table_association.main" error: Missing resource instance key
+2022-09-10T22:53:53.108+0100 [ERROR] vertex "module.network.aws_route_table_association.main" error: Missing resource instance key
+2022-09-10T22:54:43.433+0100 [ERROR] vertex "module.network.aws_route_table_association.main[0]" error: Incorrect attribute value type
+2022-09-10T22:54:43.433+0100 [ERROR] vertex "module.network.aws_route_table_association.main" error: Incorrect attribute value type
+2022-09-10T22:54:43.433+0100 [ERROR] vertex "module.network.aws_route_table_association.main (expand)" error: Incorrect attribute value type
+2022-09-10T22:56:02.841+0100 [ERROR] vertex "module.network.aws_route_table_association.main[0]" error: Incorrect attribute value type
+2022-09-10T22:56:02.841+0100 [ERROR] vertex "module.network.aws_route_table_association.main" error: Incorrect attribute value type
+2022-09-10T22:56:02.841+0100 [ERROR] vertex "module.network.aws_route_table_association.main (expand)" error: Incorrect attribute value type
+2022-09-10T23:01:22.125+0100 [ERROR] vertex "module.network.aws_subnet.main_public[0]" error: error creating EC2 Subnet: InvalidSubnet.Range: The CIDR '10.10.0.0/16' is invalid.
+	status code: 400, request id: e106e7cf-db65-4861-8205-2099de03f99c
+2022-09-10T23:01:22.126+0100 [ERROR] vertex "module.network.aws_subnet.main_private[0]" error: error creating EC2 Subnet: InvalidSubnet.Range: The CIDR '10.100.0.0/16' is invalid.
+	status code: 400, request id: 61de1ba5-7783-4f75-a159-ebfed0a4db42
+2022-09-10T23:01:22.126+0100 [ERROR] vertex "module.network.aws_subnet.main_private[1]" error: error creating EC2 Subnet: InvalidSubnet.Range: The CIDR '10.104.0.0/16' is invalid.
+	status code: 400, request id: cfade629-6877-48fa-ac2e-dfa51299cc4c
+2022-09-10T23:02:26.009+0100 [ERROR] vertex "module.network.aws_subnet.main_private[1]" error: error creating EC2 Subnet: InvalidSubnet.Range: The CIDR '10.11.0.0/16' is invalid.
+	status code: 400, request id: 126de862-dabb-4142-9c7e-a6fa04806a47
+2022-09-10T23:02:26.014+0100 [ERROR] vertex "module.network.aws_subnet.main_private[0]" error: error creating EC2 Subnet: InvalidSubnet.Range: The CIDR '10.10.0.0/16' is invalid.
+	status code: 400, request id: a0012c52-15da-402d-84aa-a2bc862e0989
+2022-09-10T23:02:26.017+0100 [ERROR] vertex "module.network.aws_subnet.main_public[0]" error: error creating EC2 Subnet: InvalidSubnet.Range: The CIDR '10.1.0.0/16' is invalid.
+	status code: 400, request id: 35cc239b-46e5-44e9-81b0-3ded831660ef
+2022-09-10T23:03:08.449+0100 [ERROR] vertex "module.network.aws_subnet.main_private[1]" error: error creating EC2 Subnet: InvalidSubnet.Range: The CIDR '10.11.0.0/24' is invalid.
+	status code: 400, request id: 84ef9106-516b-418b-8324-3ba23b9f42f9
+2022-09-10T23:03:08.452+0100 [ERROR] vertex "module.network.aws_subnet.main_private[0]" error: error creating EC2 Subnet: InvalidSubnet.Range: The CIDR '10.10.0.0/24' is invalid.
+	status code: 400, request id: dfeb90c5-886a-47e2-a2f1-f38770403df8
+2022-09-10T23:03:08.455+0100 [ERROR] vertex "module.network.aws_subnet.main_public[0]" error: error creating EC2 Subnet: InvalidSubnet.Range: The CIDR '10.1.0.0/24' is invalid.
+	status code: 400, request id: 05bb8343-0c2b-4068-8794-92b608334c2a
+2022-09-10T23:14:21.086+0100 [ERROR] vertex "module.network.aws_route_table.main" error: error creating Route in Route Table (rtb-0801146e16f2ccd8e) with destination (0.0.0.0/0): InvalidParameterValue: route table rtb-0801146e16f2ccd8e and network gateway igw-04f7732ed38ea44bd belong to different networks
+	status code: 400, request id: cd94734f-c382-461f-9650-24a72c0187b7
+2022-09-10T23:19:36.857+0100 [ERROR] vertex "module.network.aws_route_table.main" error: Missing resource instance key
+2022-09-10T23:20:29.280+0100 [ERROR] vertex "module.network.aws_route_table.main" error: Missing resource instance key
+2022-09-10T23:21:38.532+0100 [ERROR] vertex "module.network.aws_route_table_association.main" error: Missing resource instance key
+2022-09-10T23:27:09.846+0100 [ERROR] vertex "module.network.aws_route_table_association.main" error: Missing resource instance key
+2022-09-10T23:29:10.270+0100 [ERROR] vertex "module.network.aws_route_table.main[0]" error: error creating Route in Route Table (rtb-036cb3ef42f21a73d) with destination (10.0.10.0/24): InvalidParameterValue: route table rtb-036cb3ef42f21a73d and network gateway igw-0c662a04373ec22e5 belong to different networks
+	status code: 400, request id: 5970826f-8451-466c-b31f-a36aed71e3aa
+2022-09-10T23:30:45.587+0100 [ERROR] vertex "module.network.aws_route_table.main[0]" error: error creating Route in Route Table (rtb-0b567704fd5b5799b) with destination (10.0.10.0/24): InvalidParameterValue: route table rtb-0b567704fd5b5799b and network gateway igw-0c662a04373ec22e5 belong to different networks
+	status code: 400, request id: 834c5c04-5491-4b8a-acfb-fbdbb19949c4
+2022-09-10T23:32:31.039+0100 [ERROR] vertex "module.network.aws_route_table.main[0]" error: error creating Route in Route Table (rtb-0b1fb25f418111c99) with destination (0.0.0.0/0): InvalidParameterValue: route table rtb-0b1fb25f418111c99 and network gateway igw-0c662a04373ec22e5 belong to different networks
+	status code: 400, request id: 1f5e1ec2-5f98-4a4e-b6bf-f9555bd9fd9a
+2022-09-10T23:33:48.348+0100 [ERROR] vertex "module.network.aws_route_table.main[0]" error: error creating Route in Route Table (rtb-05cace7484d96b845) with destination (0.0.0.0/0): InvalidParameterValue: route table rtb-05cace7484d96b845 and network gateway igw-0c662a04373ec22e5 belong to different networks
+	status code: 400, request id: 0ce60c2a-2484-4c0a-876a-23e80c3b9342
+2022-09-10T23:38:17.959+0100 [ERROR] vertex "module.network.aws_route_table.main[0]" error: error creating Route in Route Table (rtb-07659703b109cfe95) with destination (0.0.0.0/0): InvalidParameterValue: route table rtb-07659703b109cfe95 and network gateway igw-0c97d62aeaf17753d belong to different networks
+	status code: 400, request id: 617207ec-f7b8-4d2b-a8a0-e41a2501415c
+2022-09-10T23:39:37.176+0100 [ERROR] vertex "module.network.data.aws_availability_zones.available" error: Error fetching Availability Zones: UnauthorizedOperation: You are not authorized to perform this operation.
+	status code: 403, request id: 98187117-7924-4c96-a47b-63dac9fb3079
+2022-09-10T23:39:37.176+0100 [ERROR] vertex "data.aws_ami.AmazonLinux" error: UnauthorizedOperation: You are not authorized to perform this operation.
+	status code: 403, request id: 9f8b9c62-1d09-43f9-b9bd-1887637429e3
+2022-09-10T23:39:37.176+0100 [ERROR] vertex "data.aws_ami.AmazonLinux" error: UnauthorizedOperation: You are not authorized to perform this operation.
+	status code: 403, request id: 9f8b9c62-1d09-43f9-b9bd-1887637429e3
+2022-09-10T23:39:37.176+0100 [ERROR] vertex "module.network.data.aws_availability_zones.available" error: Error fetching Availability Zones: UnauthorizedOperation: You are not authorized to perform this operation.
+	status code: 403, request id: 98187117-7924-4c96-a47b-63dac9fb3079
+2022-09-10T23:39:37.176+0100 [ERROR] vertex "data.aws_ami.AmazonLinux (expand)" error: UnauthorizedOperation: You are not authorized to perform this operation.
+	status code: 403, request id: 9f8b9c62-1d09-43f9-b9bd-1887637429e3
+2022-09-10T23:39:37.176+0100 [ERROR] vertex "module.network.data.aws_availability_zones.available (expand)" error: Error fetching Availability Zones: UnauthorizedOperation: You are not authorized to perform this operation.
+	status code: 403, request id: 98187117-7924-4c96-a47b-63dac9fb3079
+2022-09-10T23:40:22.646+0100 [ERROR] vertex "module.network.data.aws_availability_zones.available" error: Error fetching Availability Zones: UnauthorizedOperation: You are not authorized to perform this operation.
+	status code: 403, request id: 3481add3-9b3f-4ef2-b89f-72b447754055
+2022-09-10T23:40:22.646+0100 [ERROR] vertex "module.network.data.aws_availability_zones.available" error: Error fetching Availability Zones: UnauthorizedOperation: You are not authorized to perform this operation.
+	status code: 403, request id: 3481add3-9b3f-4ef2-b89f-72b447754055
+2022-09-10T23:40:22.646+0100 [ERROR] vertex "module.network.data.aws_availability_zones.available (expand)" error: Error fetching Availability Zones: UnauthorizedOperation: You are not authorized to perform this operation.
+	status code: 403, request id: 3481add3-9b3f-4ef2-b89f-72b447754055
+2022-09-11T00:45:45.332+0100 [ERROR] vertex "module.network.aws_security_group.public" error: Incorrect attribute value type
+2022-09-11T00:45:45.333+0100 [ERROR] vertex "module.network.aws_security_group.public" error: Incorrect attribute value type
+2022-09-11T00:47:03.236+0100 [ERROR] vertex "module.network.aws_security_group.public" error: Incorrect attribute value type
+2022-09-11T00:47:03.236+0100 [ERROR] vertex "module.network.aws_security_group.public" error: Incorrect attribute value type
+2022-09-11T00:47:34.259+0100 [ERROR] vertex "module.network.aws_security_group.public" error: Incorrect attribute value type
+2022-09-11T00:47:34.259+0100 [ERROR] vertex "module.network.aws_security_group.public" error: Incorrect attribute value type
+2022-09-11T00:47:54.525+0100 [ERROR] vertex "module.network.aws_security_group.public" error: Incorrect attribute value type
+2022-09-11T00:47:54.525+0100 [ERROR] vertex "module.network.aws_security_group.public" error: Incorrect attribute value type
+2022-09-11T00:48:27.152+0100 [ERROR] vertex "module.network.aws_security_group.public" error: Incorrect attribute value type
+2022-09-11T00:48:27.153+0100 [ERROR] vertex "module.network.aws_security_group.public" error: Incorrect attribute value type
+2022-09-11T00:49:01.485+0100 [ERROR] vertex "module.network.aws_security_group.public" error: Incorrect attribute value type
+2022-09-11T00:49:01.485+0100 [ERROR] vertex "module.network.aws_security_group.public" error: Incorrect attribute value type
+2022-09-11T00:50:04.265+0100 [ERROR] vertex "module.network.aws_security_group.public" error: Missing resource instance key
+2022-09-11T00:50:36.921+0100 [ERROR] vertex "module.network.aws_security_group.public" error: Missing resource instance key
+2022-09-11T00:50:36.921+0100 [ERROR] vertex "module.network.aws_security_group.public" error: Missing resource instance key
+2022-09-11T00:50:36.921+0100 [ERROR] vertex "module.network.aws_security_group.public" error: Missing resource instance key
+2022-09-11T00:51:53.992+0100 [ERROR] vertex "module.network.aws_security_group.public" error: Incorrect attribute value type
+2022-09-11T00:51:53.992+0100 [ERROR] vertex "module.network.aws_security_group.public" error: Incorrect attribute value type
+2022-09-11T00:54:17.188+0100 [ERROR] vertex "module.network.aws_security_group.public" error: Missing resource instance key
+2022-09-11T00:54:17.188+0100 [ERROR] vertex "module.network.aws_security_group.public" error: Incorrect attribute value type
+2022-09-11T00:54:17.188+0100 [ERROR] vertex "module.network.aws_security_group.public" error: Incorrect attribute value type
+2022-09-11T00:54:25.998+0100 [ERROR] vertex "module.network.aws_security_group.public" error: Incorrect attribute value type
+2022-09-11T00:54:25.998+0100 [ERROR] vertex "module.network.aws_security_group.public" error: Incorrect attribute value type
+2022-09-11T00:57:52.759+0100 [ERROR] vertex "module.network.aws_security_group.public" error: Incorrect attribute value type
+2022-09-11T00:57:52.759+0100 [ERROR] vertex "module.network.aws_security_group.public" error: Incorrect attribute value type
+2022-09-11T00:59:46.348+0100 [ERROR] vertex "module.network.aws_security_group.public" error: Incorrect attribute value type
+2022-09-11T00:59:46.349+0100 [ERROR] vertex "module.network.aws_security_group.public" error: Incorrect attribute value type
+2022-09-11T01:00:24.160+0100 [ERROR] vertex "module.network.aws_security_group.public" error: Incorrect attribute value type
+2022-09-11T01:00:24.160+0100 [ERROR] vertex "module.network.aws_security_group.public" error: Incorrect attribute value type
+2022-09-11T01:22:57.210+0100 [ERROR] vertex "module.network.aws_security_group.public" error: Incorrect attribute value type
+2022-09-11T01:22:57.210+0100 [ERROR] vertex "module.network.aws_security_group.public" error: Incorrect attribute value type
+2022-09-11T01:46:18.063+0100 [ERROR] vertex "module.network.aws_security_group.public" error: Unsupported argument

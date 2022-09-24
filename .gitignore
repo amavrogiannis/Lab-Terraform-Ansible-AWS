@@ -1,0 +1,5 @@
+**/.terraform/providers/**/*
+**/.terraform.lock.hcl
+**/terraform.tfstate.backup
+ec2-ansible-demo.pem
+**/backend/**/*

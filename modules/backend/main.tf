@@ -1,9 +1,31 @@
+terraform {
+  required_version = "~>1.2.9"
+  required_providers {
+    local = {
+      source  = "hashicorp/local"
+      version = "2.2.3"
+    }
+
+    aws = {
+      source  = "hashicorp/aws"
+      version = "~> 4.0.0"
+    }
+  }
+}
+
+
+provider "aws" {
+  region  = "eu-west-1"
+  profile = "and"
+}
+
 resource "aws_s3_bucket" "backend" {
   bucket = "terraform-vms-ansible-demo-backend"
 
   tags = {
     Terraform   = "true"
-    Owner       = "A.Mavrogiannis"
+    "Project"   = "Ansible-demo-IaaC-Guild"
+    Contact     = "alex.mavrogiannis"
     Environment = "Backend"
   }
 }
@@ -67,22 +89,17 @@ resource "aws_s3_bucket_public_access_block" "s3-backend" {
   restrict_public_buckets = true
 }
 
-
-resource "aws_dynamodb_table" "backend" {
+resource "aws_dynamodb_table" "terraform-lock" {
   name           = "terraform-vms-ansible-demo-backend"
-  billing_mode   = "PROVISIONED"
   read_capacity  = 5
   write_capacity = 5
   hash_key       = "LockID"
-
-
   attribute {
     name = "LockID"
     type = "S"
   }
-
-  ttl {
-    attribute_name = "TimeToExist"
-    enabled        = false
+  tags = {
+    "Project" = "Ansible-demo-IaaC-Guild"
+    "Contact" = "alex.mavrogiannis"
   }
 }
