@@ -1,0 +1,19 @@
+---
+- name: install my applications
+  yum:
+    name: 
+    - yum-utils 
+    - device-mapper-persistent-data 
+    - lvm2
+    - git
+    - unzip 
+    - awscli
+    - docker
+    state: latest
+    update_cache: true
+
+- name: restart docker
+  ansible.builtin.service: 
+    name: docker
+    state: restarted
+    enabled: true

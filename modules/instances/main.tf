@@ -10,8 +10,8 @@ resource "aws_instance" "main" {
 
   user_data = <<EOF
   #!/bin/bash
+  sudo su
   yum update -y && yum upgrade -y
-  sudo amazon-linux-extras install ansible2 -y
   EOF
 
   ebs_block_device {

@@ -15,6 +15,13 @@ resource "aws_security_group" "public" {
     }
   }
 
+egress {
+  cidr_blocks = [ "0.0.0.0/0" ]
+  from_port = 0
+  ipv6_cidr_blocks = [ "::/0" ]
+  protocol = "-1"
+  to_port = 0
+}
   tags = {
     "Project"   = "${var.project-name}"
     "Contact"   = "${var.project-poc}"

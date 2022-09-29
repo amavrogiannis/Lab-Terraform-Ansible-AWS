@@ -1,4 +1,0 @@
----
-  vars:
-    document_root: /var/www/html
-    app_root: site_html

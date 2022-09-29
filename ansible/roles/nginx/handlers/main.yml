@@ -1,0 +1,12 @@
+---
+# - name: restart httpd
+#   ansible.builtin.service: 
+#     name: httpd
+#     state: start
+#     enabled: true
+
+# - name: restart nginx
+#   service: 
+#     name: nginx 
+#     state: restarted 
+#     enabled: yes

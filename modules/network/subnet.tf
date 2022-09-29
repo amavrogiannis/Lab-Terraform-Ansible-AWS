@@ -9,6 +9,7 @@ resource "aws_subnet" "main_private" {
   ]
 
   tags = {
+    "Name" = "private-sub-${var.vpc_name}"
     "Project"   = "${var.project-name}"
     "Contact"   = "${var.project-poc}"
     "Terraform" = "Yes"
@@ -27,6 +28,7 @@ resource "aws_subnet" "main_public" {
   ]
 
   tags = {
+    "Name" = "public-sub-${var.vpc_name}"
     "Project"   = "${var.project-name}"
     "Contact"   = "${var.project-poc}"
     "Terraform" = "Yes"
