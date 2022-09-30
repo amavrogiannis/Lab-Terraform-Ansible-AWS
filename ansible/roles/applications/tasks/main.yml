@@ -1,24 +1,39 @@
 ---
 - name: update OS on my Amazon Linux
   yum: 
-    name: 
-    - update
-    - upgrade
+    name: "*"
+    state: latest
+    update_cache: yes
+    update_only: yes
+  register: yum_update_status
+
+- name: Add extras repository
+  shell: yum-config-manager --enable extras
+    
 - name: install my applications
   yum:
     name: 
     - yum-utils 
     - device-mapper-persistent-data 
     - lvm2
+    - curl 
+    - wget 
+    - unzip
+    - aws-cfn-bootstrap 
+    - nfs-utils 
+    - chrony 
+    - conntrack 
+    - jq 
+    - ec2-instance-connect 
+    - socat
     - git
     - unzip 
     - awscli
-    - docker
+    - python
+    - containerd
     state: latest
     update_cache: true
-
-- name: restart docker
-  ansible.builtin.service: 
-    name: docker
-    state: restarted
-    enabled: true
+  
+- name: Remove packates not needed anymore
+  yum:
+    autoremove: yes

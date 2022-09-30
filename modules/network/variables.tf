@@ -70,6 +70,14 @@ variable "ingress_roles" {
     },
     {
       description      = "Terraform managed rule"
+      from_port        = 8080
+      to_port          = 8080
+      protocol         = "tcp"
+      cidr_blocks      = ["0.0.0.0/0"]
+      ipv6_cidr_blocks = ["::/0"]
+    },
+    {
+      description      = "Terraform managed rule"
       from_port        = 443
       to_port          = 443
       protocol         = "tcp"

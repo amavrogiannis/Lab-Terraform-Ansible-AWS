@@ -7,3 +7,4 @@
   roles:
     # - nginx # This points to the roles, utilizing the scripts under the roles directory. 
     - applications
+    - container
