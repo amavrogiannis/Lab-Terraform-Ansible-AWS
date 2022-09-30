@@ -4,6 +4,12 @@ aws_profile: and
 region: 
   - eu-central-1
 keyed_groups:
-  - key: tags
-    prefix: tag
-# filter: ec2-*-*-*-*.eu-central-*.compute.amazonaws.com
+  - key: tags.Contact
+    prefix: tags
+    value: alex.mavrogiannis
+# filters: 
+#   tag:Contact: alex.mavrogiannis
+hostnames:
+   - dns-name
+compose:
+  ansible_host: public_dns_name
