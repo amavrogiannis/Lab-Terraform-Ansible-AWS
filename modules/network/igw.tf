@@ -6,7 +6,7 @@ resource "aws_internet_gateway" "public" {
   ]
 
   tags = {
-    "Name" = "IGW-${var.vpc_name}"
+    "Name"      = "IGW-${var.vpc_name}"
     "Project"   = "${var.project-name}"
     "Contact"   = "${var.project-poc}"
     "Terraform" = "Yes"
@@ -54,7 +54,7 @@ resource "aws_route_table" "public" {
   ]
 
   tags = {
-      "Name" = "RT-Public-${var.vpc_name}"
+    "Name"      = "RT-Public-${var.vpc_name}"
     "Project"   = "${var.project-name}"
     "Contact"   = "${var.project-poc}"
     "Terraform" = "Yes"
@@ -65,7 +65,7 @@ resource "aws_route_table" "private" {
   vpc_id = aws_vpc.main.id
 
   tags = {
-      "Name" = "RT-Private-${var.vpc_name}"
+    "Name"      = "RT-Private-${var.vpc_name}"
     "Project"   = "${var.project-name}"
     "Contact"   = "${var.project-poc}"
     "Terraform" = "Yes"

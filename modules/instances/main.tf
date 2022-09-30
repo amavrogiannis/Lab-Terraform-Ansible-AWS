@@ -8,11 +8,11 @@ resource "aws_instance" "main" {
   vpc_security_group_ids = [var.vpc_security_group_ids]
   key_name               = var.ec2-key_name
 
-  user_data = <<EOF
-  #!/bin/bash
-  sudo su
-  yum update -y && yum upgrade -y
-  EOF
+  # user_data = <<EOF
+  # #!/bin/bash
+  # sudo su
+  # yum update -y && yum upgrade -y
+  # EOF
 
   ebs_block_device {
     delete_on_termination = true

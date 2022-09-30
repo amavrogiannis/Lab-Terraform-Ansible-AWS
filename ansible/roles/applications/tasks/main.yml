@@ -1,4 +1,9 @@
 ---
+- name: update OS on my Amazon Linux
+  yum: 
+    name: 
+    - update
+    - upgrade
 - name: install my applications
   yum:
     name: 

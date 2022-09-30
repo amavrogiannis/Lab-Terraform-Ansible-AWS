@@ -56,12 +56,55 @@ variable "environment" {
   default     = "development"
 }
 
-variable "main_sg" {
-  description = "Allowed ports to Network VPC"
-  type        = any
-  default = {
-    "22"  = ["147.12.183.153/32"]
-    "80"  = ["0.0.0.0/0"]
-    "433" = ["0.0.0.0/0"]
-  }
+variable "ingress_roles" {
+  description = "Allowed ports inbound traffic"
+  type        = list
+  default = [
+    {
+      description      = "Terraform managed rule"
+      from_port        = 80
+      to_port          = 80
+      protocol         = "tcp"
+      cidr_blocks      = ["0.0.0.0/0"]
+      ipv6_cidr_blocks = ["::/0"]
+    },
+    {
+      description      = "Terraform managed rule"
+      from_port        = 443
+      to_port          = 443
+      protocol         = "tcp"
+      cidr_blocks      = ["0.0.0.0/0"]
+      ipv6_cidr_blocks = ["::/0"]
+    },
+    {
+      description      = "Terraform managed rule"
+      from_port        = 22
+      to_port          = 22
+      protocol         = "tcp"
+      cidr_blocks      = ["147.12.183.165/32"]
+      ipv6_cidr_blocks = ["::/0"]
+    },
+    {
+      description      = "Terraform managed rule"
+      from_port        = -1
+      to_port          = -1
+      protocol         = "icmp"
+      cidr_blocks      = ["147.12.183.165/32"]
+      ipv6_cidr_blocks = ["::/0"]
+    }
+  ]
+}
+
+variable "egress_roles" {
+  description = "Allow outbound traffic"
+  type        = list
+  default = [
+    {
+      from_port        = 0
+      to_port          = 0
+      protocol         = "all"
+      cidr_blocks      = ["0.0.0.0/0"]
+      ipv6_cidr_blocks = ["::/0"]
+    }
+  ]
 }

@@ -5,23 +5,26 @@ resource "aws_security_group" "public" {
   vpc_id      = aws_vpc.main.id
 
   dynamic "ingress" {
-    for_each = var.main_sg
+    for_each = var.ingress_roles
     content {
-      from_port   = ingress.key
-      to_port     = ingress.key
-      cidr_blocks = ingress.value
-      protocol    = "tcp"
-      description = "Terraform managed rule"
+      description = ingress.value["description"]
+      from_port   = ingress.value["from_port"]
+      to_port     = ingress.value["to_port"]
+      protocol    = ingress.value["protocol"]
+      cidr_blocks = tolist(ingress.value["cidr_blocks"])
     }
   }
 
-egress {
-  cidr_blocks = [ "0.0.0.0/0" ]
-  from_port = 0
-  ipv6_cidr_blocks = [ "::/0" ]
-  protocol = "-1"
-  to_port = 0
-}
+  dynamic "egress" {
+    for_each = var.egress_roles
+    content {
+      from_port   = egress.value["from_port"]
+      to_port     = egress.value["to_port"]
+      protocol    = egress.value["protocol"]
+      cidr_blocks = tolist(egress.value["cidr_blocks"])
+    }
+  }
+
   tags = {
     "Project"   = "${var.project-name}"
     "Contact"   = "${var.project-poc}"

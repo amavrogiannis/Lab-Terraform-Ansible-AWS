@@ -19,7 +19,7 @@ variable "ec2-name" {
 variable "ec2-type" {
   description = "Let's see what will be the cost?"
   type        = string
-  default     = "t3.micro"
+  default     = "t3.small"
 }
 
 variable "ec2-key_name" {
