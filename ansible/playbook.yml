@@ -1,10 +1,10 @@
-- name: Install Nginx
+- name: Setup Webserver - Ansible Demo @ AND
   hosts: tags_alex_mavrogiannis # tag_Contact_alex_mavrogiannis
   become: yes
   # gather_facts: no
   become_method: sudo
 
   roles:
-    # - nginx # This points to the roles, utilizing the scripts under the roles directory. 
+    - apache 
     - applications
     - container

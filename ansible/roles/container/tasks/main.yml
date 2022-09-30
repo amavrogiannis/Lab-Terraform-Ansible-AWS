@@ -6,18 +6,9 @@
   pip:
     executable: pip3
     name: docker
-
-- name: restart containerd
-  ansible.builtin.service: 
-    name: containerd
-    state: restarted
-    enabled: yes
-
-- name: restart docker
-  ansible.builtin.service: 
-    name: docker
-    state: restarted
-    enabled: yes
+  notify: 
+    - restart containerd
+    - restart docker
 
 - name: deploy nginx docker container
   docker_container:
