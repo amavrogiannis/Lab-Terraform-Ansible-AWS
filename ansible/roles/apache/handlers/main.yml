@@ -1,9 +1,9 @@
 ---
-- name: started apache
+- name: restart apache
   ansible.builtin.service:
-    name: httpd
-    enabled: yes
+    name: httpd.service
     state: restarted
+    enabled: yes
 
 - name: restart nginx
   service: 
