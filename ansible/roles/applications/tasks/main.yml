@@ -33,6 +33,11 @@
     - containerd
     state: latest
     update_cache: true
+
+- name: Start installed service apps
+  command: echo "This task will start the installed apps services"
+  notify:
+    - start_new_service
   
 - name: Remove packates not needed anymore
   yum:
