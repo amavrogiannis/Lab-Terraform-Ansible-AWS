@@ -30,7 +30,8 @@ Ansible - https://devops4solutions.medium.com/manage-ansible-playbook-for-multip
 
 
 ```
-project
+Ansible-Project-Repo
+|
 │   README.md
 │   backend.tf 
 │   main.tf
@@ -77,22 +78,22 @@ project
 │               │   main.yml
 │               │   ...
 │   
-└───modules
-│   └───backend
-│       │   main.tf
-│   └───instances
-│       │   data.tf
-│       │   main.tf
-│       │   outputs.tf
-│       │   variables.tf
-│   └───network
-│       │   data.tf
-│       │   main.tf
-│       │   outputs.tf
-│       │   variables.tf
-│       │   igw.tf
-│       │   security.tf
-│       │   subnet.tf
+|   └───modules
+│       └───backend
+│           │   main.tf
+│       └───instances
+│           │   data.tf
+│           │   main.tf
+│           │   outputs.tf
+│           │   variables.tf
+│       └───network
+│           │   data.tf
+│           │   main.tf
+│           │   outputs.tf
+│           │   variables.tf
+│           │   igw.tf
+│           │   security.tf
+│           │   subnet.tf
 ```
 
 ```
