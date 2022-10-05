@@ -24,9 +24,9 @@ The infrastructure is also visually shown to the below diagram:
 
 The below directory structure, is set to a basic terraform and ansible best practice. You can also set the terraform, so as the ansible to different environments, in using a new top directory with the environment's name. 
 
-references: 
-Terraform - https://getbetterdevops.io/terraform-create-infrastructure-in-multiple-environments/
-Ansible - https://devops4solutions.medium.com/manage-ansible-playbook-for-multiple-environments-a7d142dea2c7
+References: 
+- Terraform - https://getbetterdevops.io/terraform-create-infrastructure-in-multiple-environments/
+- Ansible - https://devops4solutions.medium.com/manage-ansible-playbook-for-multiple-environments-a7d142dea2c7
 
 
 ```
