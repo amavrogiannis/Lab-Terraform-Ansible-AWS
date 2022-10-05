@@ -13,10 +13,11 @@ The project plan is as follows:
     - Internet Gateway
     - 2 EC2 Instances
 - Instance configuration using Ansible: 
-    - Server A: Webserver that will host Apache (port 80) and internal Docker container running Nginx using port 8080. 
+    - Server A: Webserver that will host Apache (port **80**) and internal Docker container running Nginx using port **8080**. 
     - Server B: Private server, which will simply have a number of packages installed inside it for the developer to use in a private environment. 
 
 The infrastructure is also visually shown to the below diagram: 
+<br/>
 <img src="docs/Diagram - Ansible demo.jpg" width="500px" height="500px">
 
 ## Add your files
