@@ -98,7 +98,7 @@ Ansible-Project-Repo
 
 Playing with anisble: 
 <br/>
-<img src="docs/ansible-demo_AdobeExpress.gif" width="500px" height="350px"/>
+<img src="docs/ansible-demo.mov" width="500px" height="350px"/>
 
 ## Integrate with your tools
 
