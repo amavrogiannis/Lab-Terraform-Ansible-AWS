@@ -96,12 +96,9 @@ Ansible-Project-Repo
 │           │   subnet.tf
 ```
 
-```
-cd existing_repo
-git remote add origin https://gitlab.com/ANDigital/cloud-hubble/cloudhubble-iaac-guild-terraform-ansible.git
-git branch -M main
-git push -uf origin main
-```
+Playing with anisble: 
+<br/>
+<img src="docs/ansible-demo_AdobeExpress.gif" width="500px" height="350px"/>
 
 ## Integrate with your tools
 
