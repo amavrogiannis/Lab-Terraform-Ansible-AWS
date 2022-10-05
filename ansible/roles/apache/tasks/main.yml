@@ -13,6 +13,3 @@
 - name: modify home page
   shell: 'echo "Hello World! This is Ansible demo @ AND" > /var/www/html/index.html'
 
-
-
-

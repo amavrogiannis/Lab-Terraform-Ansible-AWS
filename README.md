@@ -4,9 +4,20 @@
 
 ## Getting started
 
-To make it easy for you to get started with GitLab, here's a list of recommended next steps.
+The project plan is as follows: 
+- Provision infrastructure using Terraform
+    - VPC
+    - 3 Subnets (1 Public and 2 Private)
+    - Security groups
+    - Route Tables
+    - Internet Gateway
+    - 2 EC2 Instances
+- Instance configuration using Ansible: 
+    - Server A: Webserver that will host Apache (port 80) and internal Docker container running Nginx using port 8080. 
+    - Server B: Private server, which will simply have a number of packages installed inside it for the developer to use in a private environment. 
 
-Already a pro? Just edit this README.md and make it your own. Want to make it easy? [Use the template at the bottom](#editing-this-readme)!
+The infrastructure is also visually shown to the below diagram: 
+<img src="docs/Diagram - Ansible demo.jpg" width="500px" height="500px">
 
 ## Add your files
 
