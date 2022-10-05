@@ -20,10 +20,80 @@ The infrastructure is also visually shown to the below diagram:
 <br/>
 <img src="docs/Diagram - Ansible demo.jpg" width="500px" height="500px">
 
-## Add your files
+## Directory structure
 
-- [ ] [Create](https://docs.gitlab.com/ee/user/project/repository/web_editor.html#create-a-file) or [upload](https://docs.gitlab.com/ee/user/project/repository/web_editor.html#upload-a-file) files
-- [ ] [Add files using the command line](https://docs.gitlab.com/ee/gitlab-basics/add-file.html#add-a-file-using-the-command-line) or push an existing Git repository with the following command:
+The below directory structure, is set to a basic terraform and ansible best practice. You can also set the terraform, so as the ansible to different environments, in using a new top directory with the environment's name. 
+
+references: 
+Terraform - https://getbetterdevops.io/terraform-create-infrastructure-in-multiple-environments/
+Ansible - https://devops4solutions.medium.com/manage-ansible-playbook-for-multiple-environments-a7d142dea2c7
+
+
+```
+project
+│   README.md
+│   backend.tf 
+│   main.tf
+│   providers.tf
+│   variables.tf     
+│
+└───ansible
+│   │   ansible.cfg
+│   │   playbook.yml
+│   │   ***my-key.pem*** (hidden)
+│   │
+│   └───group_vars
+│       │   all.yml
+│       │   ...
+│   └───inventory
+│       │   aws_ec2.yml
+│       │   ...
+│   └───roles
+│       └───apache
+│           └───handlers
+│               │   main.yml
+│               │   ...
+│           └───site_html
+│               │   index.html
+│               │   ...
+│           └───tasks
+│               │   main.yml
+│               │   ...
+│           └───templates
+│               │   instance.conf
+│               │   ...
+│       └───applications
+│           └───handlers
+│               │   main.yml
+│               │   ...
+│           └───tasks
+│               │   main.yml
+│               │   ...
+│       └───container
+│           └───handlers
+│               │   main.yml
+│               │   ...
+│           └───tasks
+│               │   main.yml
+│               │   ...
+│   
+└───modules
+│   └───backend
+│       │   main.tf
+│   └───instances
+│       │   data.tf
+│       │   main.tf
+│       │   outputs.tf
+│       │   variables.tf
+│   └───network
+│       │   data.tf
+│       │   main.tf
+│       │   outputs.tf
+│       │   variables.tf
+│       │   igw.tf
+│       │   security.tf
+│       │   subnet.tf
+```
 
 ```
 cd existing_repo
