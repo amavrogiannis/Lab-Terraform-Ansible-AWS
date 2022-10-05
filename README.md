@@ -96,9 +96,6 @@ Ansible-Project-Repo
 │           │   subnet.tf
 ```
 
-Playing with anisble: 
-<br/>
-<img src="docs/ansible-demo.mov" width="500px" height="350px"/>
 
 ## Integrate with your tools
 
