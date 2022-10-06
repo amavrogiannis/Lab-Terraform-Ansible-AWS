@@ -13,11 +13,8 @@ terraform {
   }
 }
 
-provider "local" {
-
-}
 
 provider "aws" {
-  region  = "eu-central-1"
-  profile = "and"
+  region  = local.region
+  profile = local.aws_profile
 }

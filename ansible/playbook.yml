@@ -6,5 +6,14 @@
 
   roles:
     - apache 
-    - applications
     - container
+
+
+- name: Install Apps - Ansible Demo @ AND
+  hosts: tags_alex_mavrogiannis # tag_Contact_alex_mavrogiannis
+  become: yes
+  gather_facts: yes
+  become_method: sudo
+
+    roles:
+    - applications
