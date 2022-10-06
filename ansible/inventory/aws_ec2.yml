@@ -1,15 +1,20 @@
 ---
+# Ansible have a number of plug-ins that you can use in the market place. aws_ec2 plugin is part of its parent collection community.aws
 plugin: aws_ec2
+# aws_profile is your aws profile that is configured on your endpoint. Example command setting up the profile: > aws configure ...
 aws_profile: and 
+# Select the AWS region you need to deploy. The following specifies Frankfurt Germany. 
 region: 
   - eu-central-1
+# In this script, we are checking the invenotory. The below is going to pull the instances that have tag > Contact: alex.mavrogiannis
 keyed_groups:
   - key: tags.Contact
     prefix: tags
     value: alex.mavrogiannis
-# filters: 
-#   tag:Contact: alex.mavrogiannis
+# This filters your search, to display your instances with their dns-name only. Otherwise, you might get multiple values for the same instance. 
 hostnames:
    - dns-name
+# Set individual variables with compose
 compose:
+# Use the public dns name to connect to the host
   ansible_host: public_dns_name

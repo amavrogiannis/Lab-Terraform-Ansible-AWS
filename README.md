@@ -1,9 +1,15 @@
 # CloudHubble-IaaC-Guild-Terraform-Ansible
+This is the Terraform Ansible Infrastructure Demo, which is presented on the IaaC Guild at Cloud Hubble. This infrastructure is set to a basic AWS VPC, Subnets, EC2 Instances that are provisioned and configured using Terraform and Ansible that structured in best practices. 
 
+You can clone this repository and get started, also feel free to contribute in the project, if you think any part needs to be improved. 
 
+Check the prerequisite, before you initiate the infrastructure on your AWS Account. 
+
+### Prerequisite:
+- Terraform 1.3.0
+- Ansible core 2.13.4
 
 ## Getting started
-
 The project plan is as follows: 
 - Provision infrastructure using Terraform
     - VPC
@@ -21,7 +27,6 @@ The infrastructure is also visually shown to the below diagram:
 <img src="docs/Diagram - Ansible demo.jpg" width="500px" height="500px">
 
 ## Directory structure
-
 The below directory structure, is set to a basic terraform and ansible best practice. You can also set the terraform, so as the ansible to different environments, in using a new top directory with the environment's name. 
 
 References: 
