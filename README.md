@@ -5,7 +5,7 @@ You can clone this repository and get started, also feel free to contribute in t
 
 Check the prerequisite, before you initiate the infrastructure on your AWS Account. 
 
-### Prerequisite:
+### Prerequisites:
 - Terraform 1.3.0
 - Ansible core 2.13.4
 
