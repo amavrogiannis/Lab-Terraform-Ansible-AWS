@@ -12,6 +12,7 @@ resource "aws_security_group" "public" {
       to_port     = ingress.value["to_port"]
       protocol    = ingress.value["protocol"]
       cidr_blocks = tolist(ingress.value["cidr_blocks"])
+      self = ingress.value["self"]
     }
   }
 

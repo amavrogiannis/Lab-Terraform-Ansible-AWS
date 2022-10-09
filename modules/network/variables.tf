@@ -58,7 +58,7 @@ variable "environment" {
 
 variable "ingress_roles" {
   description = "Allowed ports inbound traffic"
-  type        = list
+  type        = list(any)
   default = [
     {
       description      = "Terraform managed rule"
@@ -67,6 +67,7 @@ variable "ingress_roles" {
       protocol         = "tcp"
       cidr_blocks      = ["0.0.0.0/0"]
       ipv6_cidr_blocks = ["::/0"]
+      self = false
     },
     {
       description      = "Terraform managed rule"
@@ -75,6 +76,7 @@ variable "ingress_roles" {
       protocol         = "tcp"
       cidr_blocks      = ["0.0.0.0/0"]
       ipv6_cidr_blocks = ["::/0"]
+      self = false
     },
     {
       description      = "Terraform managed rule"
@@ -83,6 +85,7 @@ variable "ingress_roles" {
       protocol         = "tcp"
       cidr_blocks      = ["0.0.0.0/0"]
       ipv6_cidr_blocks = ["::/0"]
+      self = false
     },
     {
       description      = "Terraform managed rule"
@@ -91,6 +94,7 @@ variable "ingress_roles" {
       protocol         = "tcp"
       cidr_blocks      = ["147.12.183.165/32"]
       ipv6_cidr_blocks = ["::/0"]
+      self = true
     },
     {
       description      = "Terraform managed rule"
@@ -99,13 +103,14 @@ variable "ingress_roles" {
       protocol         = "icmp"
       cidr_blocks      = ["147.12.183.165/32"]
       ipv6_cidr_blocks = ["::/0"]
+      self = true
     }
   ]
 }
 
 variable "egress_roles" {
   description = "Allow outbound traffic"
-  type        = list
+  type        = list(any)
   default = [
     {
       from_port        = 0
