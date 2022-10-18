@@ -2,16 +2,25 @@
 - name: Enable docker package from amazon-linux-extras
   command: amazon-linux-extras enable docker
 
+- name: Install container dependency containerd.
+  yum:
+    name:
+    - containerd
+    - python
+    - python3
+    - python3-pip
+  notify: 
+    - restart containerd
+
 - name: Install Docker module for Python
   pip:
     executable: pip3
     name: docker
   notify: 
-    - restart containerd
     - restart docker
 
 - name: deploy nginx docker container
-  docker_container:
+  community.docker.docker_container:
     image: nginx:stable
     name: nginx
     state: started

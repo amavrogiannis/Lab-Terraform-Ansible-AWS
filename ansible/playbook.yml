@@ -1,19 +1,26 @@
-- name: Setup Webserver - Ansible Demo @ AND
-  hosts: tags_alex_mavrogiannis # tag_Contact_alex_mavrogiannis
+# - name: Setup Webserver - Ansible Demo @ AND
+#   hosts: tags_Apache # tag_Contact_alex_mavrogiannis
+#   become: yes
+#   gather_facts: yes
+#   become_method: sudo
+
+#   roles:
+#     - apache
+
+- name: Setup Container - Ansible Demo @ AND
+  hosts: tags_Docker
   become: yes
   gather_facts: yes
   become_method: sudo
 
   roles:
-    - apache 
     - container
 
-
 - name: Install Apps - Ansible Demo @ AND
-  hosts: tags_alex_mavrogiannis # tag_Contact_alex_mavrogiannis
+  hosts: tags_Packages 
   become: yes
   gather_facts: yes
   become_method: sudo
 
-    roles:
+  roles:
     - applications

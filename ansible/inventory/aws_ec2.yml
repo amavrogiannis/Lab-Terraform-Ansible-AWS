@@ -8,9 +8,16 @@ region:
   - eu-central-1
 # In this script, we are checking the invenotory. The below is going to pull the instances that have tag > Contact: alex.mavrogiannis
 keyed_groups:
-  - key: tags.Contact
+  - key: tags.AnsibleRole
     prefix: tags
-    value: alex.mavrogiannis
+    value: apache
+  - key: tag.AnsibleRole
+    prefix: tags
+    value: Docker
+  - key: tag.AnsibleRole
+    prefix: tags
+    value: Packages
+
 # This filters your search, to display your instances with their dns-name only. Otherwise, you might get multiple values for the same instance. 
 hostnames:
    - dns-name

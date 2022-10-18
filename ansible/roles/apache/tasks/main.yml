@@ -4,12 +4,11 @@
     name: httpd
     state: present
 
-# - name: Copy apache configuration for instance
-#   template: 
-#     src: templates/instance.conf
-#     dest: /etc/httpd/conf.d/default.conf
-#     notify: restart apache
+# - name: modify home page
+#   shell: 'echo "Hello World! This is Ansible demo @ AND" > /var/www/html/index.html'
 
-- name: modify home page
-  shell: 'echo "Hello World! This is Ansible demo @ AND" > /var/www/html/index.html'
-
+- name: copy html file to main path
+  template:
+    src: templates/index.html
+    dest: /var/www/html/index.html
+  notify: restart apache
