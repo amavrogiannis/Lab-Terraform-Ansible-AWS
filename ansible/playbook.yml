@@ -16,11 +16,11 @@
   roles:
     - container
 
-# - name: Install Apps - Ansible Demo @ AND
-#   hosts: tags_Packages 
-#   become: yes
-#   gather_facts: yes
-#   become_method: sudo
+- name: Install Apps - Ansible Demo @ AND
+  hosts: tags_Packages 
+  become: yes
+  gather_facts: yes
+  become_method: sudo
 
-#   roles:
-#     - applications
+  roles:
+    - applications
