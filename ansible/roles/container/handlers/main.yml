@@ -2,11 +2,18 @@
 - name: restart containerd
   ansible.builtin.service: 
     name: containerd
-    state: restarted
+    state: started
     enabled: yes
+
+- name: start docker
+  ansible.builtin.service: 
+    name: docker.service
+    state: started
+    enabled: yes
+  become: true
 
 - name: restart docker
   ansible.builtin.service: 
-    name: docker
+    name: docker.service
     state: restarted
     enabled: yes

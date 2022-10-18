@@ -1,16 +1,29 @@
 ---
+- name: update the system
+  yum:
+    name: "*"
+    state: latest
+
 - name: Enable docker package from amazon-linux-extras
   command: amazon-linux-extras enable docker
 
-- name: Install container dependency containerd.
+- name: Install container dependency containerd
   yum:
     name:
+    - yum-utils 
+    - lvm2
     - containerd
     - python
-    - python3
-    - python3-pip
+    - docker
   notify: 
     - restart containerd
+
+- name: start docker
+  ansible.builtin.service: 
+    name: docker.service
+    state: started
+    enabled: yes
+  become: true
 
 - name: Install Docker module for Python
   pip:
@@ -23,7 +36,7 @@
   community.docker.docker_container:
     image: nginx:stable
     name: nginx
-    state: started
+    state: present
     auto_remove: true
     ports:
       - "8080:80"

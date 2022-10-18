@@ -10,17 +10,17 @@
 - name: Setup Container - Ansible Demo @ AND
   hosts: tags_Docker
   become: yes
-  gather_facts: yes
+  gather_facts: no
   become_method: sudo
 
   roles:
     - container
 
-- name: Install Apps - Ansible Demo @ AND
-  hosts: tags_Packages 
-  become: yes
-  gather_facts: yes
-  become_method: sudo
+# - name: Install Apps - Ansible Demo @ AND
+#   hosts: tags_Packages 
+#   become: yes
+#   gather_facts: yes
+#   become_method: sudo
 
-  roles:
-    - applications
+#   roles:
+#     - applications

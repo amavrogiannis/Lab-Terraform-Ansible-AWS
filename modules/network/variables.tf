@@ -92,7 +92,7 @@ variable "ingress_roles" {
       from_port        = 22
       to_port          = 22
       protocol         = "tcp"
-      cidr_blocks      = ["147.12.183.165/32"]
+      cidr_blocks      = ["34.249.64.26/32"]
       ipv6_cidr_blocks = ["::/0"]
       self = true
     },
@@ -101,7 +101,7 @@ variable "ingress_roles" {
       from_port        = -1
       to_port          = -1
       protocol         = "icmp"
-      cidr_blocks      = ["147.12.183.165/32"]
+      cidr_blocks      = ["34.249.64.26/32"]
       ipv6_cidr_blocks = ["::/0"]
       self = true
     }
