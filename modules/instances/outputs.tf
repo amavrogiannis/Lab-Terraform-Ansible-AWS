@@ -9,9 +9,11 @@ output "ec2-web-hostname" {
 output "ec2-docker" {
   value = aws_instance.server-docker.id
 }
-output "ec2-apps-hostname" {
+
+output "ec2-docker-hostname" {
   value = aws_instance.server-docker.host_id
 }
+
 output "ec2-packages" {
   value = aws_instance.server-packages.id
 }

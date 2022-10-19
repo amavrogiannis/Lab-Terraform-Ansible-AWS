@@ -15,8 +15,16 @@ resource "aws_instance" "server-web" {
     volume_type           = "gp2"
   }
 
+  # user_data = <<EOF
+  # #!/bin/bash
+  # sudo yum update -y
+  # sudo amazon-linux-extras install httpd -y
+  # sudo systemctl start httpd
+  # sudo systemctl enable httpd
+  # EOF
+
   tags = {
-    "Name"      = "${var.ec2-name}"
+    "Name"      = "${var.ec2-name}-webserver"
     "Project"   = "${var.project-name}"
     "Contact"   = "${var.project-poc}"
     "AnsibleRole" = "Apache"
@@ -40,6 +48,15 @@ resource "aws_instance" "server-docker" {
     volume_size           = 25
     volume_type           = "gp2"
   }
+
+  # user_data = <<EOF
+  # #!/bin/bash
+  # yum update -y
+  # amazon-linux-extras install docker
+  # service docker start
+  # usermod -a -G docker ec2-user
+  # chkconfig docker on
+  # EOF
 
   tags = {
     "Name"      = "${var.ec2-name}-docker"
@@ -66,6 +83,12 @@ resource "aws_instance" "server-packages" {
     volume_size           = 25
     volume_type           = "gp2"
   }
+
+  # user_data = <<EOF
+  # #!/bin/bash
+  # yum update -y
+  # yum install -y git aws curl unzip wget
+  # EOF
 
   tags = {
     "Name"      = "${var.ec2-name}-applications"

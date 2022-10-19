@@ -13,7 +13,7 @@ variable "project-poc" {
 variable "ec2-name" {
   description = "Baptise your instance"
   type        = string
-  default     = "ansible-bastion"
+  default     = "ansible-ec2"
 }
 
 variable "ec2-type" {

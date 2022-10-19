@@ -1,0 +1,8 @@
+- name: Setup Webserver - Ansible Demo @ AND
+  hosts: tags_Apache
+  become: yes
+  gather_facts: yes
+  become_method: sudo
+
+  roles:
+    - apache

@@ -1,0 +1,8 @@
+- name: Install Apps - Ansible Demo @ AND
+  hosts: tags_Packages 
+  become: yes
+  gather_facts: yes
+  become_method: sudo
+
+  roles:
+    - applications
