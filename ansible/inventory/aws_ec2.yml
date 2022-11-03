@@ -14,9 +14,6 @@ keyed_groups:
   - key: tag.AnsibleRole
     prefix: tags
     value: Docker
-  - key: tag.AnsibleRole
-    prefix: tags
-    value: Packages
 
 # This filters your search, to display your instances with their dns-name only. Otherwise, you might get multiple values for the same instance. 
 hostnames:

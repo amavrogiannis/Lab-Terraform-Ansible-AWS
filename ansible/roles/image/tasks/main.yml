@@ -52,4 +52,3 @@
     auto_remove: true
     ports:
       - "80:80"
-
