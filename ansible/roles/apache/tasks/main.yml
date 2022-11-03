@@ -9,6 +9,6 @@
 
 - name: copy html file to main path
   template:
-    src: templates/index.html
-    dest: /var/www/html/index.html
+    src: "{{ html_src }}"
+    dest: "{{ html_dest }}"
   notify: restart apache

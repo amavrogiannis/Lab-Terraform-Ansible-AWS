@@ -1,6 +1,6 @@
 ---
-document_root: /usr/share/nginx/html/index.html
-app_root: /Users/amavrogiannis/Documents/Git/Lab-Terraform-Ansible-AWS/ansible/roles/nginx/site_html/index.html
+html_src: templates/index.html
+html_dest: /var/www/html/index.html
 ansible_ssh_user: ec2-user
 ansible_user: ec2-user
 ansible_ssh_private_key_file: /Users/amavrogiannis/Documents/Git/Lab-Terraform-Ansible-AWS/ansible/ec2-ansible-demo.pem

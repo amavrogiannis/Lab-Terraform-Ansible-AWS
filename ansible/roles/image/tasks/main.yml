@@ -22,11 +22,34 @@
   pip:
     executable: pip3
     name: docker
-
+ 
 - name: start docker
   ansible.builtin.service: 
     name: docker.service
     state: started
     enabled: yes
   become: true
+
+- name: Copy files over to path
+  copy: 
+    src: templates/
+    dest: /home/ec2-user/
+
+- name: Build Docker image
+  docker_image:
+    name: customimage
+    tag: latest
+    build:
+      path: /home/ec2-user/
+    source: build
+    state: present
+
+- name: deploy custom image to container
+  community.docker.docker_container:
+    image: customimage:latest
+    name: anisbleDemo
+    state: started
+    auto_remove: true
+    ports:
+      - "80:80"
 
